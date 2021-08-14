@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tip Calculator</title>
+</head>
+<body>
+    <div class="container-fluid main">
+      <div class="logo d-flex justify-content-center pt-2 pt-lg-5"><img class="pt-5 imm" src="assets/images/logo.svg" alt=""></div>
+      <div class="row">
+        <div class="col-lg-8 col-12 mt-4 main-container">
+            <div class="container">
+              <div class="row">
+                <div class="col-12 col-lg-6 sideparent">
+                  <div class="side1 p-3">
+                    <div class="section section1">
+                      <p>Bill</p>
+                      <div class="inputdiv d-flex">
+                        <div class="inputdiv2"><p class="mt-2"><img src="assets/images/icon-dollar.svg" alt=""></p></div><div class="input">
+                          <input type="text" placeholder="0" id="input1"  oninput="test()" pattern="\d*" maxlength="6">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="section section2 mt-5">
+                      <p class="mb-3">Select tip %</p>
+                      <div class="row">
+                        <div class="col-4">
+                          <input type="radio" id="5" name="percent" class="radio" oninput="test(this.id)">
+                          <label for="5" class="btn-percent" id="5">5%</label>
+                        </div>
+                        <div class="col-4">
+                          <input type="radio" id="10" name="percent" class="radio" oninput="test(this.id)">
+                          <label for="10" class="btn-percent" id="10">10%</label>
+                        </div>
+                        <div class="col-4">
+                          <input type="radio" id="15" name="percent" class="radio" oninput="test(this.id)">
+                          <label for="15" class="btn-percent" id="15">15%</label>
+                        </div>
+                        <div class="col-4">
+                          <input type="radio" id="20" name="percent" class="radio" oninput="test(this.id)">
+                          <label for="20" class="btn-percent" id="20">20%</label>
+                        </div>
+                        <div class="col-4">
+                          <input type="radio" id="25" name="percent" class="radio" oninput="test(this.id)">
+                          <label for="25" class="btn-percent" id="25">25%</label>
+                        </div>
+                        <div class="col-4">
+                          <input type="text" id="none" style="display: none;">
+                          <input type="text" class="custom" placeholder="Custom"  oninput="test()" id="input2">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="section section1 mt-4">
+                      <p>Number of Person</p>
+                      <div class="inputdiv d-flex">
+                        <div class="inputdiv2"><p><img src="assets/images/icon-person.svg" alt=""></p></div><div class="input">
+                          <input type="text" placeholder="0" id="input3" oninput="test()">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-lg-6 sideparent">
+                  <div class="side2 p-3">
+                    <div class="container">
+                      <div class="amount d-flex justify-content-between align-items-center">
+                        <div class="amount1 mt-5">
+                          <p class="text-light ammain">Tip Amount</p>
+                          <p class="amsub">/person</p>
+                        </div>
+                        <div class="amount2">
+                          <h1 class="ammain amdolar" id="result1">$0.00</h1>
+                        </div>
+                      </div>
+                      <div class="amount d-flex justify-content-between align-items-center">
+                        <div class="amount1 mt-5">
+                          <p class="text-light ammain">Total</p>
+                          <p class="amsub">/person</p>
+                        </div>
+                        <div class="amount2">
+                          <h1 class="ammain amdolar" id="result2">$0.00</h1>
+                        </div>
+                      </div>
+                      <div class="btn">
+                        <button id="reset">Reset</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <script src="assets/functions.js"></script>
+</body>
+</html>
